@@ -1,16 +1,16 @@
 # Skytap-Terraform-Schematic💻
 
+En este tutorial se va a desarrollar un ejemplo para aprender como aprovisonar recursos desde una maquina local con Ubuntu e IBM Schematics utilizando Terraform.
 
+## Componentes incluidos 
 
-## Requerimientos 
+* Una maquina virtual ubuntu.
+* Terraform v0.12.24.
+* Terraform-skytap provider v0.14.0.
+* Github.
+* Skytap.
 
-* Una maquina virtual ubuntu 
-* Terraform v0.12.24
-* Terraform-skytap provider v0.14.0
-* Github para clonar el repositorio de código fuente.
-* Acceso a cuenta Skytap.
-
-## 1 Aprovisionamiento de infraestructura en Skytap desde una maquina local
+## 1 Aprovisionamiento de recursos en Skytap desde una maquina local con Terraform.
 
 ### 1.1 Instale Terraform en su máquina local
 
@@ -92,10 +92,19 @@ resource "skytap_environment" "enviroment"{
   template_id = "id"
   name = "Prueba"
   description = "Skytap terraform provider example environment."
-}
+} ....
 </pre></code>
+### 1.4 Ejecutar script y aprovisionar recursos.
 
-## 2. Aprovisionamiento de recursos en Skytap desde IBM Schematics
+* Desde un shell de comandos en el directorio donde creó la configuración:
+
+** Escriba ` terraform init`  para inicializar la configuración. Terraform descarga e instala automáticamente el proveedor Skytap 
+ Terraform, y muestra cualquier error en la configuración.
+** Escriba terraform plan para verificar que la configuración es lo que pretende generar.
+** Escriba terraform apply para ejecutar la configuración y crear el entorno que especificó.
+
+
+## 2. Aprovisionamiento de recursos en Skytap desde IBM Schematics con Terraform.
 
 ### 2.1 Github
 
@@ -131,11 +140,11 @@ b. Importar la plantilla de Terraform:
 c. Recuperar Variables de entrada.
 
 * Seleccionamos nuestras variables de entrada las cuales son User name y API key.
-* Insertar variables de auteticacion las cuales se encuentran en nuestra cuenta de Skytap.
+* Insertar variables de autenticacion las cuales se encuentran en nuestra cuenta de Skytap.
 d. Creamos un espacio de trabajo 
 
 e. Generar Plan.
-Una vez creado el escpacio de trabajo generamos el plan de nuestra plantilla de Terraform atra vez del boton generar plan el cualsimula el comando de `terraform plan`  se usa para crear un plan de ejecución.
+Una vez creado el escpacio de trabajo generamos el plan de nuestra plantilla de Terraform atra vez del boton generar plan el cual simula el comando de `terraform plan`  se usa para crear un plan de ejecución.
 
 
 f. Aplicar plan
