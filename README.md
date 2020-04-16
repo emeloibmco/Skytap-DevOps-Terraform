@@ -1,12 +1,18 @@
-# Skytap-DevOps-Terraform💻
+# Skytap-Terraform-Schematic💻
+
+
 
 ## Requerimientos 
 
 * Una maquina virtual ubuntu 
 * Terraform v0.12.24
 * Terraform-skytap provider v0.14.0
+* Github para clonar el repositorio de código fuente.
+* Acceso a cuenta Skytap.
 
-### 1. Instale Terraform en su máquina local
+## 1 Aprovisionamiento de infraestructura en Skytap desde una maquina local
+
+### 1.1 Instale Terraform en su máquina local
 
 a. Cree una carpeta en su sistema local que se llama terraform y navegue a su carpeta.
 
@@ -35,7 +41,7 @@ Vera una salida como la siguiente:
 
 `Terraform v0.12.24`
 
-### 2. Descargue el complemento skytap provider 
+### 1.2 Descargue el complemento skytap provider 
 
 a. [Descargue la última versión del archivo binario de Skytap Provider.](https://releases.hashicorp.com/terraform-provider-skytap/)
 
@@ -62,7 +68,7 @@ Vera una salida como la siguiente:
 -
 -
 
-### 3. Configure el elemento Skytap provider
+### 1.3 Configure el elemento Skytap provider
 
 a. Cree una carpeta en su máquina local para su primer proyecto Terraform y navegue hacia la carpeta. Esta carpeta se utiliza para almacenar todos los archivos de configuración y definiciones de variables.
 
@@ -88,5 +94,55 @@ resource "skytap_environment" "enviroment"{
   description = "Skytap terraform provider example environment."
 }
 </pre></code>
+
+## 2. Aprovisionamiento de recursos en Skytap desde IBM Schematics
+
+### 2.1 Github
+
+a. Crear un repositorio con los archivos terraforms vars.tf y main.tf.
+
+* vars.tf contiene nuestras variables de autenticacion de Skytap. 
+
+` variable "username" {
+  description = "Enter your Skytap username"
+}
+variable "api_token" {
+  description = "Enter your Skytap API token"
+} `
+
+* main.tf contiene el script de aprovisionamiento de recursos en Skytap.
+
+` provider "skytap" {
+  username = "${var.username}"
+  api_token = "${var.api_token}"
+}
+resource "skytap_environment" "enviroment"{
+  template_id = "id"
+  name = "Prueba"
+  description = "Skytap terraform provider example environment."
+} ......`
+
+### 2.1 Configuracion Schematics.
+
+a. En IBM Schematics crear un espacio de trabajo.
+b. Importar la plantilla de Terraform:
+
+* Se copia la URL del repositorio de GitHub o GitLab el cual contiene la platilla de Terraform de aprovisunamiento de recursos en Skytap.
+c. Recuperar Variables de entrada.
+
+* Seleccionamos nuestras variables de entrada las cuales son User name y API key.
+* Insertar variables de auteticacion las cuales se encuentran en nuestra cuenta de Skytap.
+d. Creamos un espacio de trabajo 
+
+e. Generar Plan.
+Una vez creado el escpacio de trabajo generamos el plan de nuestra plantilla de Terraform atra vez del boton generar plan el cualsimula el comando de `terraform plan`  se usa para crear un plan de ejecución.
+
+
+f. Aplicar plan
+ Luego de generar el plan procedemos a aplicar nuestra plantilla de Terraform mediante el boton aplicar plan el cual simula el comando `terraform apply` , se usa para aplicar los cambios necesarios para alcanzar el estado deseado de la configuración.
+ 
+g. Una vez aplicado el plan podemos ver el aprovisionamiento de recursos en Skytap. 
+ 
+
 
 
