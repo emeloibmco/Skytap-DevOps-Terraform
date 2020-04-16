@@ -96,12 +96,12 @@ resource "skytap_environment" "enviroment"{
 </pre></code>
 ### 1.4 Ejecutar script y aprovisionar recursos.
 
-* Desde un shell de comandos en el directorio donde creó la configuración:
+Desde un shell de comandos en el directorio donde creó la configuración:
 
-** Escriba ` terraform init`  para inicializar la configuración. Terraform descarga e instala automáticamente el proveedor Skytap 
+* Escriba ` terraform init`  para inicializar la configuración. Terraform descarga e instala automáticamente el proveedor Skytap 
  Terraform, y muestra cualquier error en la configuración.
-** Escriba terraform plan para verificar que la configuración es lo que pretende generar.
-** Escriba terraform apply para ejecutar la configuración y crear el entorno que especificó.
+* Escriba terraform plan para verificar que la configuración es lo que pretende generar.
+* Escriba terraform apply para ejecutar la configuración y crear el entorno que especificó.
 
 
 ## 2. Aprovisionamiento de recursos en Skytap desde IBM Schematics con Terraform.
