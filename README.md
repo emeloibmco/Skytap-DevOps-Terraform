@@ -122,11 +122,11 @@ a. Crear un repositorio con los archivos terraforms vars.tf y main.tf.
 variable "api_token" {
   description = "Enter your Skytap API token"
 } 
-</pre><code>
+`
 
 * main.tf contiene el script de aprovisionamiento de recursos en Skytap.
-<pre><code>
-  provider "skytap" {
+
+ ` provider "skytap" {
   username = "${var.username}"
   api_token = "${var.api_token}"
 }
