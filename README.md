@@ -66,9 +66,6 @@ d. Ingrese a la carpeta occulta y verifique que la instalación se haya terminad
 
 Vera una salida como la siguiente:
 
--
--
--
 
 ### 1.3 Configure el elemento Skytap provider
 
