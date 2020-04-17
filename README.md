@@ -115,16 +115,18 @@ a. Crear un repositorio con los archivos terraforms vars.tf y main.tf.
 
 * vars.tf contiene nuestras variables de autenticacion de Skytap. 
 
-` variable "username" {
+<pre><code>
+variable "username" {
   description = "Enter your Skytap username"
 }
 variable "api_token" {
   description = "Enter your Skytap API token"
-} `
+} 
+</pre><code>
 
 * main.tf contiene el script de aprovisionamiento de recursos en Skytap.
-
-` provider "skytap" {
+<pre><code>
+  provider "skytap" {
   username = "${var.username}"
   api_token = "${var.api_token}"
 }
@@ -132,7 +134,8 @@ resource "skytap_environment" "enviroment"{
   template_id = "id"
   name = "Prueba"
   description = "Skytap terraform provider example environment."
-} ......`
+} ......
+</pre><code>
 
 
 Suministre los recursos. Para crear, modificar o eliminar recursos de su cuenta de IBM Cloud, IBM Cloud Schematics utiliza el mandato terraform apply. Este mandato llama al plugin de proveedor de IBM Cloud para Terraform, que tiene conocimiento de la API de cada recurso, para suministrar, configurar o eliminar el recurso. 
