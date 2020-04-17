@@ -109,7 +109,7 @@ Una vez ejecutado el script podemos ver los recursos aprovisionados en Skytap.
 ![sche](https://github.com/emeloibmco/Skytap-DevOps-Terraform/blob/master/Sche1.png)
 
 
-#### 1.  Github
+#### 1.  Github.
 
 a. Crear un repositorio con los archivos terraforms vars.tf y main.tf.
 
@@ -138,7 +138,6 @@ resource "skytap_environment" "enviroment"{
 </pre><code>
 
 
-Suministre los recursos. Para crear, modificar o eliminar recursos de su cuenta de IBM Cloud, IBM Cloud Schematics utiliza el mandato terraform apply. Este mandato llama al plugin de proveedor de IBM Cloud para Terraform, que tiene conocimiento de la API de cada recurso, para suministrar, configurar o eliminar el recurso. 
 #### 2. Configuracion Schematics.
 
 a. En IBM Schematics crear un espacio de trabajo.
