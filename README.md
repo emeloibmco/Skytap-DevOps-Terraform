@@ -9,6 +9,8 @@ En este tutorial se va a desarrollar un ejemplo para aprender como aprovisonar r
 * Terraform-skytap provider v0.14.0.
 * Github.
 * Skytap.
+## Arquitectura
+![arquitectura](https://github.com/emeloibmco/Skytap-DevOps-Terraform/blob/master/arquitectura%20skytap.png)
 
 ## 1 Aprovisionamiento de recursos en Skytap desde una maquina local con Terraform.
 
