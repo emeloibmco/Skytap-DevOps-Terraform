@@ -106,7 +106,8 @@ Desde un shell de comandos en el directorio donde creó la configuración:
 Una vez ejecutado el script podemos ver los recursos aprovisionados en Skytap.
 
 ## 2. Aprovisionamiento de recursos en Skytap desde IBM Schematics con Terraform.
-https://github.com/emeloibmco/Skytap-DevOps-Terraform/blob/master/Sche.png
+![sche](https://github.com/emeloibmco/Skytap-DevOps-Terraform/blob/master/Sche.png)
+
 
 ### 2.1 Github
 
