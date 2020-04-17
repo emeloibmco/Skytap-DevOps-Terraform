@@ -150,7 +150,7 @@ d. Creamos un espacio de trabajo
 
 #### 3. Plan de Ejecucion.
 
-Una vez creado el espacio de trabajo generamos el plan de nuestra plantilla de Terraform atra vez del boton generar plan el cual simula el comando de `terraform plan`  para analizar los archivos de configuración de la plantilla de Terraform en su repositorio GitHub enlazado y para crear un resumen de acciones que se deben llevar a cabo para alcanzar el estado que se describe en los archivos de configuración. Para determinar las acciones, IBM Cloud Schematics tiene en consideración los recursos que ya se han suministrado en la cuenta de IBM Cloud para ofrecerle una vista previa sobre si se deben añadir, modificar o eliminar recursos. Puede revisar el plan y cualquier error de validación consultando los registros.
+Una vez creado el espacio de trabajo generamos el plan de nuestra plantilla de Terraform atra vez del boton generar plan el cual simula el comando de `terraform plan`  para analizar los archivos de configuración de la plantilla de Terraform en su repositorio GitHub enlazado y para crear un resumen de acciones que se deben llevar a cabo para alcanzar el estado que se describe en los archivos de configuración. Para determinar las acciones, IBM Cloud Schematics tiene en consideración los recursos que ya se han suministrado en skytap para ofrecerle una vista previa sobre si se deben añadir, modificar o eliminar recursos. Puede revisar el plan y cualquier error de validación consultando los registros.
 
 
 #### 4. Aprovisionamiento de recursos.
