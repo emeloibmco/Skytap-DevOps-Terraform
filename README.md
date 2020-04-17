@@ -156,3 +156,4 @@ g. Una vez aplicado el plan podemos ver el aprovisionamiento de recursos en Skyt
 
 
 
+(https://help.skytap.com/terraform-provider.html)
