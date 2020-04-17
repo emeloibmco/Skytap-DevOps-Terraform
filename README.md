@@ -115,8 +115,8 @@ a. Crear un repositorio con los archivos terraforms vars.tf y main.tf.
 
 * vars.tf contiene nuestras variables de autenticacion de Skytap. 
 
-<pre><code>
-variable "username" {
+
+`variable "username" {
   description = "Enter your Skytap username"
 }
 variable "api_token" {
@@ -134,8 +134,7 @@ resource "skytap_environment" "enviroment"{
   template_id = "id"
   name = "Prueba"
   description = "Skytap terraform provider example environment."
-} ......
-</pre><code>
+} ...... `
 
 
 #### 2. Configuracion Schematics.
