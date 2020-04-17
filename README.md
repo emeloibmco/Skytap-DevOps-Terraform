@@ -109,7 +109,7 @@ Una vez ejecutado el script podemos ver los recursos aprovisionados en Skytap.
 ![sche](https://github.com/emeloibmco/Skytap-DevOps-Terraform/blob/master/Sche1.png)
 
 
-### 1  Github
+#### 1.  Github
 
 a. Crear un repositorio con los archivos terraforms vars.tf y main.tf.
 
@@ -136,7 +136,7 @@ resource "skytap_environment" "enviroment"{
 
 
 Suministre los recursos. Para crear, modificar o eliminar recursos de su cuenta de IBM Cloud, IBM Cloud Schematics utiliza el mandato terraform apply. Este mandato llama al plugin de proveedor de IBM Cloud para Terraform, que tiene conocimiento de la API de cada recurso, para suministrar, configurar o eliminar el recurso. 
-### 2 Configuracion Schematics.
+#### 2. Configuracion Schematics.
 
 a. En IBM Schematics crear un espacio de trabajo.
 b. Importar la plantilla de Terraform:
@@ -148,12 +148,12 @@ c. Recuperar Variables de entrada.
 * Insertar variables de autenticacion las cuales se encuentran en nuestra cuenta de Skytap.
 d. Creamos un espacio de trabajo 
 
-#### Plan de Ejecucion.
+#### 3. Plan de Ejecucion.
 
 Una vez creado el espacio de trabajo generamos el plan de nuestra plantilla de Terraform atra vez del boton generar plan el cual simula el comando de `terraform plan`  para analizar los archivos de configuración de la plantilla de Terraform en su repositorio GitHub enlazado y para crear un resumen de acciones que se deben llevar a cabo para alcanzar el estado que se describe en los archivos de configuración. Para determinar las acciones, IBM Cloud Schematics tiene en consideración los recursos que ya se han suministrado en la cuenta de IBM Cloud para ofrecerle una vista previa sobre si se deben añadir, modificar o eliminar recursos. Puede revisar el plan y cualquier error de validación consultando los registros.
 
 
-#### Aprovisionamiento de recursos.
+#### 4. Aprovisionamiento de recursos.
 
  Luego de generar el plan procedemos a aplicar nuestra plantilla de Terraform mediante el boton aplicar plan el cual simula el comando `terraform apply` , se usa para aprovisonar los recursos en Skytap.
  
