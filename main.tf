@@ -9,7 +9,7 @@ resource "skytap_environment" "env"{
   description = "Skytap terraform provider example environment."
 }
 resource "skytap_environment" "env2"{
-  template_id = "1863063"
+  template_id = "1881795"
   name = "Jenkins V2 on Ubuntu"
   description = "Skytap terraform provider example environment."
 }
