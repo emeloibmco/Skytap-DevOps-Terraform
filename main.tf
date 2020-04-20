@@ -5,16 +5,16 @@ provider "skytap" {
 
 resource "skytap_environment" "env"{
   template_id = "1863063"
-  name = "Prueba"
+  name = "Ubuntu 18.04 LTS"
   description = "Skytap terraform provider example environment."
 }
 resource "skytap_environment" "env2"{
   template_id = "1863063"
-  name = "Prueba2"
+  name = "Jenkins V2 on Ubuntu"
   description = "Skytap terraform provider example environment."
 }
 resource "skytap_project" "project" {
-  name = "Terraform Example"
+  name = "Terraform "
   summary = "Skytap terraform provider example project."
   show_project_members = false
   auto_add_role_name = "participant"
