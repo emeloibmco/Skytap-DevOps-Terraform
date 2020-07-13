@@ -4,12 +4,12 @@ provider "skytap" {
 }
 
 resource "skytap_environment" "env"{
-  template_id = "1863063"
+  template_id = "1478915"
   name = "Ubuntu 18.04 LTS"
   description = "Skytap terraform provider example environment."
 }
 resource "skytap_environment" "env2"{
-  template_id = "1881795"
+  template_id = "1424761"
   name = "Jenkins V2 on Ubuntu"
   description = "Skytap terraform provider example environment."
 }
