@@ -6,25 +6,18 @@ provider "skytap" {
 resource "skytap_environment" "env"{
   template_id = "1478915"
   name = "Ubuntu 18.04 LTS"
-  description = "Skytap terraform provider example environment."
+  description = "Maquina Ubuntu."
 }
 resource "skytap_environment" "env2"{
-  template_id = "1424761"
-  name = "Jenkins V2 on Ubuntu"
-  description = "Skytap terraform provider example environment."
-}
-resource "skytap_project" "project" {
-  name = "Terraform "
-  summary = "Skytap terraform provider example project."
-  show_project_members = false
-  auto_add_role_name = "participant"
+  template_id = "1501511"
+  name = "AIX 7.2"
+  description = "Maquina Power AIX 7.2."
 }
 
 data "skytap_template" "example" {
     name = "18.04"
     most_recent = true
 }
-
 
 resource "skytap_network" "network" {
   environment_id = "${skytap_environment.env.id}"
