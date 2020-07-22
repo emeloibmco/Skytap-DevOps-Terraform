@@ -9,7 +9,7 @@ resource "skytap_environment" "env"{
   description = "Maquina Ubuntu."
 }
 resource "skytap_environment" "env2"{
-  template_id = "1501511"
+  template_id = "1498899"
   name = "AIX 7.2"
   description = "Maquina Power AIX 7.2."
 }
